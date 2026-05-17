@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #FF4500; /* Vibrant Orange-Red */
+    --secondary-color: #FFD700; /* Bright Gold */
+    --dark-color: #2D3436;
+    --light-bg: #FFF9F0; /* Soft warm background */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* This makes the scrolling look smooth */
+}
+
+body { background-color: var(--light-bg); color: var(--dark-color); }
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--dark-color); }
+.logo span { color: var(--primary-color); }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { text-decoration: none; color: var(--dark-color); font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary-color); }
+
+/* Updated Hero Section with Background Image */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    /* This adds the image and a dark tint so text is readable */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates a cool parallax effect! */
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Makes text pop */
+}.badge { background: var(--secondary-color); padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; }
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255,69,0,0.3); }
+
+/* Grid Showcase */
+.showcase { padding: 80px 8%; text-align: center; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: scale(1.05); }
+.card-img { height: 180px; background: #ddd; border-radius: 10px; margin-bottom: 15px; }
+
+/* Contact Section */
+.contact-section { padding: 80px 8%; background: var(--primary-color); color: white; text-align: center; }
+.contact-container { max-width: 600px; margin: auto; }
+form { display: flex; flex-direction: column; margin-top: 30px; }
+input { padding: 15px; margin-bottom: 15px; border: none; border-radius: 8px; outline: none; }
+.submit-btn {
+    padding: 15px;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
